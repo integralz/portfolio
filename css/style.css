@@ -1,0 +1,7 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url("./main_button.css");
+
+body{
+	background: #1E1F25;
+}
