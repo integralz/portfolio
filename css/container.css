@@ -2,16 +2,37 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align : center;
     margin : 10vh 10vw;
 }
 
 .box{
-    width: 40vw;
+    width: 400px;
     height: 50vh;
 }
 
+.project_picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_title{
+    width: 300px;
+    color: white;
+    margin-bottom: 10px;
+    border-bottom : 1px solid white;
+}
+
 .project_picture img{
-    width: 30vw;
+    height: 30vh;
+    
+    object-fit: cover;
+}
+
+.project_picture video{
+    height : 30vh;
+    max-width : 400px;
+    object-fit: cover;
 }
