@@ -1,0 +1,7 @@
+.contact{
+    display: flex;
+    width : 50vw;
+    height: 50vh;
+    margin: 50px 25vw;
+    border: 1px solid white;
+}

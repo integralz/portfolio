@@ -2,6 +2,46 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80vw;
-    margin: 5vh 10vw;
+    width: calc(min(600px, 90vw) + 3vw);
+    margin: 5vh calc((95vw - min(600px, 90vw))/2);
+}
+.education{
+    color: white;
+}
+.education_name{
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+.school{
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.school_inf{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.stack_name{
+    margin-top: 5vh;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+table{
+    font-size: 18px;
+    width: min(600px, 90vw);
+    color: white;
+}
+
+.stack_nname{
+    width: 20%;
+}
+
+.stack_stat{
+    width : 30%;
 }

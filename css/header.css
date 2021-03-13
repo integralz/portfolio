@@ -22,9 +22,14 @@ header{
 
 .name{
     font-size: 45px;
+    color : white;
+    font-weight: 350;
+    opacity: 0.8;
 }
 
 .my_inf{
     margin-top: 2vh;
     font-size: 25px;
+    color: white;
+    opacity: 0.6;
 }

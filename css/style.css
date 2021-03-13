@@ -4,7 +4,7 @@
 @import url("./container.css");
 @import url("./header.css");
 @import url("./home_main.css");
+@import url("./contact.css");
 body{
-    width : 100vw;
 	background: #1E1F25;
 }

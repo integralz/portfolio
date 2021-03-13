@@ -9,7 +9,14 @@
 
 .box{
     width: 400px;
-    height: 50vh;
+    height: 55vh;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+.empty_box{
+    width: 400px;
+    height: 55vh;
 }
 
 .project_picture{
@@ -23,15 +30,22 @@
     color: white;
     margin-bottom: 10px;
     border-bottom : 1px solid white;
+    margin-top: 10px;
 }
 
 .project_picture img{
+    width: 300px;
     height: 30vh; 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project_picture video{
     height : 30vh;
     max-width : 400px;
+    object-fit: cover;
+}
+.project_picture .pic_divide{
+    width: 150px;
+    height: 30vh; 
     object-fit: cover;
 }
