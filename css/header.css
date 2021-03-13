@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    justify-content: center;
+    margin-top : 5vh;
+}
+.header_left{
+    width: min(300px, 45vw);
+    margin-right: 3vw;
+}
+
+.header_left img{
+    width: min(300px, 45vw);
+    object-fit: contain;
+}
+
+.header_right{
+    display: flex;
+    flex-direction: column;
+    width: min(300px, 30vw);
+    margin-left: 3vw;
+}
+
+.name{
+    font-size: 45px;
+}
+
+.my_inf{
+    margin-top: 2vh;
+    font-size: 25px;
+}

@@ -26,8 +26,7 @@
 }
 
 .project_picture img{
-    height: 30vh;
-    
+    height: 30vh; 
     object-fit: cover;
 }
 
