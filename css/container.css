@@ -9,9 +9,10 @@
 
 .box{
     width: 400px;
-    height: 55vh;
+    height: 60vh;
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 30px;
+    color: white;
 }
 
 .empty_box{
@@ -48,4 +49,17 @@
     width: 150px;
     height: 30vh; 
     object-fit: cover;
+}
+
+.project_inf{
+    margin-top: 10px;
+    opacity: 0.8;
+}   
+.project_url{
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.project_stack{
+    opacity: 0.8;
 }
