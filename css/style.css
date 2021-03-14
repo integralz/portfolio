@@ -7,4 +7,5 @@
 @import url("./contact.css");
 body{
 	background: #1E1F25;
+	width: 100vw;
 }
