@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     width: calc(min(600px, 90vw) + 3vw);
-    margin: 5vh calc((95vw - min(600px, 90vw))/2);
+    margin: 5vh calc((100vw - min(600px, 90vw))/2);
 }
 .education{
     color: white;

@@ -9,7 +9,7 @@
 
 .box{
     width: 400px;
-    height: 60vh;
+    height: min(600px, 70vh);
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 30px;
     color: white;
@@ -17,7 +17,7 @@
 
 .empty_box{
     width: 400px;
-    height: 55vh;
+    height: min(600px, 70vh);
 }
 
 .project_picture{
@@ -42,11 +42,11 @@
 
 .project_picture video{
     height : 30vh;
-    max-width : 400px;
+    max-width : 360px;
     object-fit: cover;
 }
 .project_picture .pic_divide{
-    width: 150px;
+    width: 140px;
     height: 30vh; 
     object-fit: cover;
 }

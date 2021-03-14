@@ -16,6 +16,7 @@ header{
 .header_right{
     display: flex;
     flex-direction: column;
+    word-break: break-word;
     width: min(300px, 30vw);
     margin-left: 2vw;
 }
