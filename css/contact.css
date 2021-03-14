@@ -1,7 +1,23 @@
 .contact{
     display: flex;
-    width : 50vw;
-    height: 50vh;
-    margin: 50px 25vw;
+    align-items: center;
+    width : min(600px, 60vw);
+    height: min(300px, 30vw);
+    margin: 50px calc((100vw - min(600px, 60vw)) / 2);
     border: 1px solid white;
+}
+
+.me2{
+    width : min(216px, 22vw);
+    height: min(300px, 30vw);
+    object-fit: cover;
+}
+
+.how_contact{
+    color : white;
+    opacity: 0.8;
+    font-size: 15px;
+    word-break:break-all;
+    margin : 10px;
+    width : calc(min(600px, 60vw) - min(216px, 22vw) - 20px);
 }
