@@ -5,6 +5,7 @@
 @import url("./header.css");
 @import url("./home_main.css");
 @import url("./contact.css");
+@import url("./rakugaki.css");
 body{
 	background: #1E1F25;
 	width: 100vw;

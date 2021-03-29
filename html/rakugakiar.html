@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/rakugaki.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jun seok's portfolio</title>
+</head>
+
+<body>
+    <main class = "rakugaki_main">
+        <div class = "rakugaki_screen">
+            <img class = "rakugaki_video" src = "../pic/cinnamoroll.gif"/>
+            <img class = "rakugaki_video" src = "../pic/human.gif"/>
+        </div>
+        <div class = "rakugaki_box">
+            <div class = "rakugaki_word">
+                image segmentation
+            </div>
+            <div class = "rakugaki_inf">
+                <ul>
+                    <li>opencv 사용(python 기준)
+                    </li>
+                    <li>사진 흑백으로 변환(cv2.cvtColor)
+                    </li>
+                    <li>
+                        사진에서 erosion과 dilation의 차이를 확인
+   (cv2.MORPH_GRADIENT, kernel 은 (2,2))
+
+                    </li>
+                    <li>
+                        사진의 색체에 문턱을 두어 같은 색으로 만듬
+   (cv2.threshold)
+
+                    </li>
+                    <li>
+                        동일한 색을 띄는 인접한 좌표를 묶은 폐곡선 확인
+   (cv2.findContours)
+
+                    </li>
+                    <li>
+                        폐곡선의 집합들 중 가장 큰 폐곡선 확인
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "rakugaki_box">
+            <div class = "rakugaki_word">
+                WebGL
+            </div>
+            <div class = "rakugaki_inf">
+                <ul>
+                    <li>
+                        THREE.js 사용
+                    </li>
+                    <li>triangulation<br>
+                        THREE.ShapeUtils.triangulateShape(vertices, holes);
+
+                    </li>
+                    <li>Custom Geometry<br>
+                        var character = new THREE.Geometry();<br>
+character.vertices.push(new THREE.Vector3(x, y, z));<br>
+character.faces.push(new THREE.Face3(vector1, vector2, vector3));
+                    </li>
+                    <li>
+                        UV mapping<br>
+                        character.faceVertexUvs[0].push([new THREE.Vector2(u[0], v[0]), new THREE.Vector2(u[1], v[1]), new THREE.Vector2(u[2], v[2])]);
+
+                    </li>
+                    <li>skeletonization(zhang-seun)<br>
+                        <a class = "rakugaki_url" href = "https://github.com/integralz/technique/blob/main/algorithm/zhang-suen.cpp" target="_blank">cpp 코드 보기</a>
+                    </li>
+                    <li> bone 생성 후 rigging<br>
+                        다리에서 분리되는 row 탐색<br>
+                        머리, 목 부분 row 탐색<br>
+                       양 팔에 대한 col 탐색<br>
+                       Skeletonization 값과 연결<br>
+                       몸체에 대한 좌표<br>
+                       - 몸체 col = 양팔 + 양다리의 평균 값<br>
+                       - 몸체 row = 머리 + 가랑이의 평균 값<br>
+                       Bone 생성
+                       (new THREE.Bone())<br>
+                       Bone들을 서로 연결,
+                       종속이 되는 Bone(ex 몸체)에 연결
+                       (bone1.add(bone2))<br>
+                       Skeleton 생성
+                       (new THREE.Skeleton(bones))<br>
+                       Vertex별로 bone을 할당
+                       (character.skinIndices.push(new THREE.Vector4(1, 0, 0, 0)))<br>
+                       (character.skinWeights.push(new THREE.Vector4(1, 0, 0, 0)))<br>
+                       new THREE.MeshStandardMaterial<br>
+                       new THREE.SkinnedMesh(character, material)<br>
+                       mesh.add(bone1);<br>
+                       mesh.bind(skeleton);<br>
+                       scene.add(mesh);<br>
+                       
+                    </li>
+                    <li>회전 변환(사람이 아닌 캐릭터)<br>
+                        material.geometry.vertices[i].x = Math.cos(gap * Math.PI / 180) * (nx) - Math.sin(gap * Math.PI / 180) * (ny - basis_y);<br>
+					material.geometry.vertices[i].y = Math.sin(gap * Math.PI / 180) * (nx) + Math.cos(gap * Math.PI / 180) * (ny - basis_y) + basis_y;
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "rakugaki_box">
+            <div class = "rakugaki_word">
+                WebXR
+            </div>
+            <div class = "rakugaki_inf">
+                <ul>
+                    <li>
+                        WebXR 세팅<br>
+                        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });<br>
+                        renderer.setPixelRatio(window.devicePixelRatio);<br>
+                        renderer.setSize(window.innerWidth, window.innerHeight);<br>
+                        renderer.xr.enabled = true;<br>
+                        container.appendChild(renderer.domElement);<br>
+                        let options = {
+                            <br>   requiredFeatures: ['hit-test'],<br>
+                               optionalFeatures: ['dom-overlay'],<br>
+                        }<br>
+                        options.domOverlay = { root: document.getElementById('content') };
+                        <br>
+                        arbutton = ARButton.createButton(renderer, options);</li>
+                    <li>
+                        AnimationLoop 생성<br>
+                        renderer.setAnimationLoop(render);
+                    </li>
+                    <li>
+                        render 함수<br>
+                        hit-test 구현<br>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "rakugaki_box">
+            <div class = "rakugaki_word">
+            </div>
+            <div class = "rakugaki_inf">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
