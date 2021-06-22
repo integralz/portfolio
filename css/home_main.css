@@ -45,3 +45,15 @@ table{
 .stack_stat{
     width : 30%;
 }
+
+.DevBlog{
+    margin-top: 5vh;
+    font-size: 30px;
+    color: white;
+}
+
+.DevBlog_URL{
+    margin-top: 1vh;
+    font-size: 24px;
+    opacity: 0.8;
+}
