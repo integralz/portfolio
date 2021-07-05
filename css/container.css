@@ -36,18 +36,18 @@
 
 .project_picture img{
     width: 300px;
-    height: 30vh; 
+    height: min(200px, 30vh); 
     object-fit: contain;
 }
 
 .project_picture video{
     height : 30vh;
-    max-width : 360px;
+    max-width : min(200px, 30vh);
     object-fit: cover;
 }
 .project_picture .pic_divide{
     width: 140px;
-    height: 30vh; 
+    height: min(200px, 30vh); 
     object-fit: cover;
 }
 
