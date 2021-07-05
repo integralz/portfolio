@@ -41,8 +41,8 @@
 }
 
 .project_picture video{
-    height : 30vh;
-    max-width : min(200px, 30vh);
+    height : min(200px, 30vh); 
+    max-width : 300px;
     object-fit: cover;
 }
 .project_picture .pic_divide{
